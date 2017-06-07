@@ -169,8 +169,8 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="td-body">
-                                    <a ng-click="$event.stopPropagation()" ng-if="institution.project_files.length" ng-repeat="project in institution.project_files" href="{{project.url}}" ng-bind="::project.name" target="_blank"></a>
+                                <div class="td-body" ng-if="institution.project_files.length" ng-repeat="project in institution.project_files">
+                                    <a ng-click="$event.stopPropagation()"  href="{{project.url}}" ng-bind="::project.name" target="_blank"></a>
                                 </div>
                                 <div class="td-body" ng-if="!institution.project_files.length">-</div>
                             </td>
