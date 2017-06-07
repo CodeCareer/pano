@@ -9,14 +9,14 @@
             $scope.shared.placeholderText = '输入关键字，如机构名称、资产类型、详细介绍或资料名称'
 
             // 跳转机构详情
-            $scope.gotoDetail = function(inst) {
-                var url = $state.href('pano.institutions.detail', {
-                    id: inst.name,
-                    dimension: inst.type === '0' ? 'from' : 'mapped_exchange'
-                })
+            // $scope.gotoDetail = function(inst) {
+            //     var url = $state.href('pano.institutions.detail', {
+            //         id: inst.name,
+            //         dimension: inst.type === '0' ? 'from' : 'mapped_exchange'
+            //     })
 
-                window.open(url, '_blank')
-            }
+            //     window.open(url, '_blank')
+            // }
 
             // 前往产品信息页
             $scope.gotoProducts = function(inst, type) {

@@ -33,7 +33,7 @@
         <span ng-repeat="item in summary.search_results">
             <span ng-if="item.search_count">
                 <span  ng-bind="::item.value"></span>相关
-                <a ng-bind="::item.search_count" class="em is-link" ui-sref="pano.smallAssetsLists.table.list({'search_fields[]': item.name})" target="_blank">
+                <a ng-bind="::item.search_count" class="em" ui-sref="pano.smallAssetsLists.table.list({'search_fields[]': item.name})" target="_blank">
                 </a>个
                 <i ng-if="$index < summary.search_results.length - 1">，</i>
             </span>
@@ -126,7 +126,7 @@
             </div>
         </div>
         <div class="table-body">
-            <div class="tr is-link" ng-repeat="institution in institutions" ng-if="institutions.length" ng-click="gotoDetail(institution)">
+            <div class="tr" ng-repeat="institution in institutions" ng-if="institutions.length">
                 <!-- <div class="tr-head tags">
                     <span ng-bind="institution.name"></span>
                     <span ng-if="institution.created_or_updated_in == '1'" class="tag tag-orange">新增</span>
