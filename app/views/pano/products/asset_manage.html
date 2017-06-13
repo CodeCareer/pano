@@ -71,7 +71,7 @@
                                     平台
                                 </div>
                                 <div class="td-body">
-                                    <a ng-if="product.from" ng-click="$event.stopPropagation()" ng-bind="::product.from | ktNull" ui-sref="pano.institutions.detail({id: product.from, dimension: 'from'})"></a>
+                                    <a ng-if="product.from" target="_blank" ng-click="$event.stopPropagation()" ng-bind="::product.from | ktNull" ui-sref="pano.institutions.detail({id: product.from, dimension: 'from'})"></a>
                                     <span ng-if="!product.from">-</span>
                                 </div>
                             </td>
