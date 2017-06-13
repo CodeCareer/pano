@@ -726,7 +726,7 @@
                 $scope.rateDatas = data.res
                 $scope.rateThTitles = _.map(data.res.list[0].set, 'group')
                 $scope.obRateTime = data.res.begin_date + '至' + data.res.end_date
-                var dpr = window.devicePixelRatio || window.webkitDevicePixelRatio || window.mozDevicePixelRatio || window.msDevicePixelRatio
+                var dpr = window.devicePixelRatio || window.webkitDevicePixelRatio || window.mozDevicePixelRatio || window.msDevicePixelRatio || 1
                 setTimeout(function() {
                     var obRateTable = $('#obRateTable')
                     var w = obRateTable.width()

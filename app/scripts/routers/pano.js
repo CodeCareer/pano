@@ -331,7 +331,7 @@
                     }
                 },
                 'pano.settings': {
-                    url: '/settings',
+                    url: '/settings?from',
                     templateUrl: 'views/pano/account/settings.html',
                     resolve: ktLazyResolve([
                         'views/pano/account/settings.css',
