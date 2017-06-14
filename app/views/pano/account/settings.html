@@ -63,7 +63,7 @@
             <span class="ml10 f1_2rem" ng-if="user.group === 'premium' && user.premium_duration">
                 剩余期限<em ng-bind="{{user.premium_duration}}"></em>天
             </span>
-            <a ng-click="upgrade()" class="ml10 f1_2rem hover-underline" ng-if="user.premium_duration<=5">延期</a>
+            <a ng-click="upgrade()" class="ml10 f1_2rem hover-underline" ng-if="user.premium_duration<=5 && user.group === 'premium'">延期</a>
             <!-- 会员文字提示 -->
             </span>
         </div>
