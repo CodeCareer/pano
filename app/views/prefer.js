@@ -14,7 +14,7 @@
                 var wantGo = $rootScope.wantGo
                 if (wantGo && ktPermits(wantGo.toState, true)) {
                     $location.url($state.href(wantGo.toState.name, wantGo.toParams))
-                } else if (!ktPermits($rootScope.defaultState, true)) {
+                } else if (!ktPermits($state.get($rootScope.defaultRoute), true)) {
                     $state.go(ktRedirectState(), $location.search())
                 } else {
                     $state.go($rootScope.defaultRoute || 'pano.overview')
