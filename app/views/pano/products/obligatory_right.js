@@ -2,7 +2,7 @@
 (function() {
     'use strict';
     angular.module('kt.pano')
-        .controller('ktProductObligatoryRightCtrl', function($scope, $rootScope, $state, $location, ktDataHelper, ktProductsService, ktSweetAlert) {
+        .controller('ktProductObligatoryRightCtrl', function($scope, $rootScope, $state, $location, ktDataHelper, ktProductsService, ktSweetAlert, $window) {
             var shared = $scope.shared
             var search = $scope.search = $location.search()
             var informationArr = ['name', 'from', 'exchange', 'asset_type', 'original_asset', 'type', 'trust_party']
@@ -56,9 +56,10 @@
             // 跳转产品详情
             $scope.gotoDetail = function(product) {
                 if (product.class === 'Product') {
-                    $state.go('pano.productObligatoryRight', {
+                   var url = $state.href('pano.productObligatoryRight', {
                         id: product.id
                     })
+                    $window.open(url, '_blank')
                 } else {
                     ktSweetAlert.swal({
                         title: '提示',
