@@ -20,9 +20,10 @@
             // 跳转产品详情
             $scope.gotoDetail = function(product) {
                 if (product.class === 'Product') {
-                    $state.go('pano.productAssetManage', {
+                    var url = $state.href('pano.productAssetManage', {
                         id: product.id
                     })
+                    window.open(url, '_blank')
                 } else {
                     ktSweetAlert.swal({
                         title: '提示',

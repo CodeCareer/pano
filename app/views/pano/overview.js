@@ -9,6 +9,7 @@
             $scope.getLife = ktDataHelper.getLife
             $scope.updateTime = '更新时间：'
             $scope.timeRange = '时间范围：'
+            $scope.dpr = 1
                 /*$scope.dynamicPopover = {
                     templateUrl: 'views/tooltips/popover.html',
                     title: '提示'
@@ -726,7 +727,7 @@
                 $scope.rateDatas = data.res
                 $scope.rateThTitles = _.map(data.res.list[0].set, 'group')
                 $scope.obRateTime = data.res.begin_date + '至' + data.res.end_date
-                var dpr = window.devicePixelRatio || window.webkitDevicePixelRatio || window.mozDevicePixelRatio || window.msDevicePixelRatio
+                var dpr = window.devicePixelRatio || window.webkitDevicePixelRatio || window.mozDevicePixelRatio || window.msDevicePixelRatio || 1
                 setTimeout(function() {
                     var obRateTable = $('#obRateTable')
                     var w = obRateTable.width()
@@ -753,7 +754,6 @@
                 $scope.asserRateTime = data.res.begin_date + '至' + data.res.end_date
                 $scope.assetThTitles = _.map(data.res.list[0].set, 'group')
                 var dpr = window.devicePixelRatio || window.webkitDevicePixelRatio || window.mozDevicePixelRatio || window.msDevicePixelRatio
-
                 setTimeout(function() {
                     var assetRateTable = $('#assetRateTable')
                     var w = assetRateTable.width()

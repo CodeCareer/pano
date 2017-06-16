@@ -13,7 +13,7 @@
                                 </span>
                             </div>
                             <div class="fr">
-                                <span class="download-chart" kt-canvas-to-image image-title="'各平台' + (rateAmountChart.tab ==='last7days'?'近七日':'历史周平均') + '发行量-收益率统计图'" canvas-parent="#rateAmountChart" update-time="{{updateDateTo}}" date-type="{{updateTime}}" on-click="bdTrack(['总览页', '下载', '气泡图'])">
+                                <span class="download-chart" kt-canvas-to-image image-title="'各平台' + (rateAmountChart.tab ==='last7days'?'近七日':'历史周平均') + '发行量-收益率统计图'" canvas-parent="#rateAmountChart" update-time="{{updateDateTo}}"date-type="{{updateTime}}" on-click="bdTrack(['总览页', '下载', '气泡图'])">
                                    下载图片<i title="下载图片" class="icon-pano icon-download"></i>
                                 </span>
                             </div>
@@ -226,7 +226,7 @@
                             <span class="ob_rate_one">资产类期限-收益率表</span>
                             <span class="ob_rate_two">时间范围：{{rateDatas.begin_date}}~{{rateDatas.end_date}}</span>
                             <div class="ob_rate_down">
-                                <span kt-canvas-to-image image-title="'资产类期限-收益率表'" canvas-parent="#obRateTable" update-time="{{obRateTime}}" date-type="{{timeRange}}" ng-click="bdTrack(['总览页','资产类期限-收益率表','下载图片'])">下载图片
+                                <span kt-canvas-to-image image-title="'资产类期限-收益率表'" dpr-font="{{dpr}}" canvas-parent="#obRateTable" update-time="{{obRateTime}}" date-type="{{timeRange}}" ng-click="bdTrack(['总览页','资产类期限-收益率表','下载图片'])">下载图片
                                     <i class="icon-pano icon-download"></i>
                                 </span>
                             </div>
@@ -260,7 +260,7 @@
                             <span class="ob_rate_one">资管类期限-收益率表</span>
                             <span class="ob_rate_two">时间范围：{{assetDatas.begin_date}}~{{assetDatas.end_date}}</span>
                             <div class="ob_rate_down">
-                                <span kt-canvas-to-image image-title="'资管类期限-收益率表'" canvas-parent="#assetRateTable" update-time="{{asserRateTime}}" date-type="{{timeRange}}" ng-click="bdTrack(['总览页','资管类期限-收益率表','下载图片'])">下载图片
+                                <span kt-canvas-to-image image-title="'资管类期限-收益率表'" dpr-font="{{dpr}}" canvas-parent="#assetRateTable" update-time="{{asserRateTime}}" date-type="{{timeRange}}" ng-click="bdTrack(['总览页','资管类期限-收益率表','下载图片'])">下载图片
                                     <i class="icon-pano icon-download"></i>
                                 </span>
                             </div>
@@ -498,7 +498,7 @@
                     </section>
                     <section class="find-box">
                         <div class="myfindPhoto" uib-popover-template="findPopover.templateUrl" popover-placement="left" popover-is-open="showFindPopover" popover-trigger="none" popover-title="{{findPopover.title}}">
-                            <a ui-sref="pano.find" ng-click="bdTrack(['总览页','点击','找人'])">
+                            <a ui-sref="pano.find" target="_blank" ng-click="bdTrack(['总览页','点击','找人'])">
                                 <img src="../../images/overviewFind.png">
                             </a>
                         </div>

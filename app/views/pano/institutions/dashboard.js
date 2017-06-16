@@ -5,6 +5,7 @@
         ktInstitutionalInfoService.get({}, function(data) {
             $scope.amounts = data.platform
             $scope.spv = data.spv
+            $scope.update = data.updated_at
         })
     })
 })()

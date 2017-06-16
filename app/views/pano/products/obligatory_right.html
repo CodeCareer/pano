@@ -93,7 +93,7 @@
                                     平台
                                 </div>
                                 <div class="td-body">
-                                    <a ng-click="$event.stopPropagation()" ng-if="::product.from" ng-bind="product.from | ktNull" ui-sref="pano.institutions.detail({id: product.from, dimension: 'from'})"></a>
+                                    <a ng-click="$event.stopPropagation()" ng-if="::product.from" target="_blank" ng-bind="product.from | ktNull" ui-sref="pano.institutions.detail({id: product.from, dimension: 'from'})"></a>
                                     <span ng-if="!product.from">-</span>
                                 </div>
                             </td>
@@ -102,7 +102,7 @@
                                     挂牌场所
                                 </div>
                                 <div class="td-body">
-                                    <a ng-click="$event.stopPropagation()" ng-if="product.exchange !== '不适用'" ng-bind="::product.exchange | ktNull" ui-sref="pano.institutions.detail({id: product.exchange, dimension: 'mapped_exchange'})"></a>
+                                    <a ng-click="$event.stopPropagation()" target="_blank" ng-if="product.exchange !== '不适用'" ng-bind="::product.exchange | ktNull" ui-sref="pano.institutions.detail({id: product.exchange, dimension: 'mapped_exchange'})"></a>
                                     <span ng-if="product.exchange === '不适用'">不适用</span>
                                 </div>
                             </td>

@@ -83,7 +83,7 @@
         .run(function($rootScope, $state, $window, $location, $templateRequest, $q,
             $timeout, $http, ktLogService, ktPermits, ktHomeResource,
             uibPaginationConfig, ktUserService, ktS, ktSweetAlert, CacheFactory,
-            ktEchartTheme1, ktRedirectState) {
+            ktEchartTheme1, ktRedirectState, ktEnv) {
 
             // ajax 请求的缓存策略
             /*eslint-disable*/
@@ -129,6 +129,12 @@
             }
 
             $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
+                //判断是不是从邮箱跳转过来
+                if ($location.search().from === 'email' && toState.name === 'pano.settings') {
+                    if ($window.detectmob()) {
+                        window.open(ktEnv().wxHost + '/#!/profile', '_self')
+                    }
+                }
                 // 通过url传播token 实现单点登录
                 if (toParams._t && toParams._t !== 'undefined') {
                     $window.localStorage.token = decodeURIComponent(toParams._t)

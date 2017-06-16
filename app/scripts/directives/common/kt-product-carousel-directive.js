@@ -29,7 +29,8 @@
                 link: function(scope) {
                     /*eslint-disable*/
                     scope.gotoDetail = function(id) {
-                        $state.go(scope.routeTo, { id: id })
+                        var url = $state.href(scope.routeTo, { id: id })
+                        window.open(url, '_blank')
                     }
 
                     scope.$watch('similars', function() {
