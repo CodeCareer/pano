@@ -102,10 +102,10 @@
                             </div>
                             <div ng-if="topAmounts.length">
                                 <div class="product_top">
-                                    <span class="product_top_one">近7日新增募集规模</span>
+                                    <span class="product_top_one">本日新增募集规模</span>
                                     <span class="product_top_two">TOP5</span>
                                     <div class="product_top_more">
-                                        <a target="_blank" ui-sref="pano.products.obligatoryRight({created_or_updated_in:1,sort_by:'sum_amount',order:'desc'})" ng-click="bdTrack(['总览页','资产类-近7日新增募集规模','查看更多'])">查看更多</a>
+                                        <a target="_blank" ui-sref="pano.products.obligatoryRight({created_or_updated_in:1,sort_by:'sum_amount',order:'desc'})" ng-click="bdTrack(['总览页','资产类-本日新增募集规模','查看更多'])">查看更多</a>
                                     </div>
                                 </div>
                                 <div class="new_product_table">
@@ -139,10 +139,10 @@
                             </div>
                             <div ng-if="topPercents.length">
                                 <div class="product_top">
-                                    <span class="product_top_one">近7日新增收益率</span>
+                                    <span class="product_top_one">本日新增收益率</span>
                                     <span class="product_top_two">TOP5</span>
                                     <div class="product_top_more">
-                                        <a target="_blank" ui-sref="pano.products.obligatoryRight({created_or_updated_in:1,sort_by:'rate',order:'asc'})" ng-click="bdTrack(['总览页','资产类-近7日新增收益率','查看更多'])">查看更多</a>
+                                        <a target="_blank" ui-sref="pano.products.obligatoryRight({created_or_updated_in:1,sort_by:'rate',order:'asc'})" ng-click="bdTrack(['总览页','资产类-本日新增收益率','查看更多'])">查看更多</a>
                                     </div>
                                 </div>
                                 <div class="new_product_table">
@@ -182,10 +182,10 @@
                                     <span>资管类</span>
                                 </div>
                                 <div class="product_top">
-                                    <span class="product_top_one">近7日新增收益率</span>
+                                    <span class="product_top_one">本日新增收益率</span>
                                     <span class="product_top_two">TOP5</span>
                                     <div class="product_top_more">
-                                        <a target="_blank" ui-sref="pano.products.assetManage({created_or_updated_in:1,sort_by:'rate',order:'asc'})" ng-click="bdTrack(['总览页','资管类-近7日新增收益率','查看更多'])">查看更多</a>
+                                        <a target="_blank" ui-sref="pano.products.assetManage({created_or_updated_in:1,sort_by:'rate',order:'asc'})" ng-click="bdTrack(['总览页','资管类-本日新增收益率','查看更多'])">查看更多</a>
                                     </div>
                                 </div>
                                 <div class="new_product_table">
@@ -529,12 +529,12 @@
                         </div>
                     </section> -->
                     <h3 ng-show="from_amounts.length">
-                        互联网金融平台近7日发行量
+                        互联网金融平台本日发行量
                         <div class="simple-pagin" ng-show="max_from_page">
                             <i class="fa fa-angle-left" ng-click="preFromPage()" ng-class="{disabled: from_page <= 0}"></i><i class="fa fa-angle-right" ng-click="nextFromPage()" ng-class="{disabled: from_page >= max_from_page}"></i>
                         </div>
                         <div class="get_more">
-                            <a target="_blank" ui-sref="pano.institutions.dashboard" ng-click="bdTrack(['总览页', '互联网金融平台近7日发行量', '更多'])">更多</a>
+                            <a target="_blank" ui-sref="pano.institutions.dashboard" ng-click="bdTrack(['总览页', '互联网金融平台本日发行量', '更多'])">更多</a>
                         </div>
                     </h3>
                     <section class="box" ng-show="from_amounts.length">
@@ -548,9 +548,9 @@
                             </ul>
                         </div>
                     </section>
-                    <h3>互联网金融平台近7日收益率
+                    <h3>互联网金融平台本日收益率
                         <div class="get_more">
-                            <a target="_blank" ui-sref="pano.institutions.dashboard" ng-click="bdTrack(['总览页', '互联网金融平台近7日收益率', '更多'])">更多</a>
+                            <a target="_blank" ui-sref="pano.institutions.dashboard" ng-click="bdTrack(['总览页', '互联网金融平台本日收益率', '更多'])">更多</a>
                         </div>
                     </h3>
                     <section class="box">
@@ -564,9 +564,9 @@
                             </ul>
                         </div>
                     </section>
-                    <h3>企业借款类近7日发行量
+                    <h3>企业借款类本日发行量
                         <div class="get_more">
-                            <a target="_blank" ui-sref="pano.institutions.dashboard" ng-click="bdTrack(['总览页', '企业借款类近7日发行量', '更多'])">更多</a>
+                            <a target="_blank" ui-sref="pano.institutions.dashboard" ng-click="bdTrack(['总览页', '企业借款类本日发行量', '更多'])">更多</a>
                         </div>
                     </h3>
                     <section class="box">
@@ -580,9 +580,9 @@
                             </ul>
                         </div>
                     </section>
-                    <h3>小微金融类近7日发行量
+                    <h3>小微金融类本日发行量
                         <div class="get_more">
-                            <a target="_blank" ui-sref="pano.institutions.dashboard" ng-click="bdTrack(['总览页', '小微金融类近7日发行量', '更多'])">更多</a>
+                            <a target="_blank" ui-sref="pano.institutions.dashboard" ng-click="bdTrack(['总览页', '小微金融类本日发行量', '更多'])">更多</a>
                         </div>
                     </h3>
                     <section class="box">
@@ -597,7 +597,7 @@
                         </div>
                     </section>
                     <!-- <h3 ng-show="exchange_amounts.length">
-                        挂牌场所近7日发行量
+                        挂牌场所本日发行量
                         <div class="simple-pagin" ng-show="max_exchange_page">
                             <i class="fa fa-angle-left" ng-click="preExchangePage()" ng-class="{disabled: exchange_page <= 0}"></i><i class="fa fa-angle-right" ng-click="nextExchangePage()" ng-class="{disabled: exchange_page >= max_exchange_page}"></i>
                             </div>
