@@ -779,12 +779,12 @@
                 content: 'hodgepodge',
             }, function(data) {
                 $scope.notices = data.notices
-                $scope.from_amounts = _.map(data.froms, function(v) {
-                    return {
-                        name: v[0],
-                        amount: v[1]
-                    }
-                })
+                // $scope.from_amounts = _.map(data.froms, function(v) {
+                //     return {
+                //         name: v[0],
+                //         amount: v[1]
+                //     }
+                // })
                 $scope.max_from_page = Math.ceil(data.froms.length / pageSize) - 1
 
                 $scope.exchange_amounts = _.map(data.exchanges, function(v) {
